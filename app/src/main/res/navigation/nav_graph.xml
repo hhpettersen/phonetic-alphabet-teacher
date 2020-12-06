@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashBoardFragment">
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.example.phoneticalphabet.dash.DashBoardFragment"
+        android:label="dash_board_fragment"
+        tools:layout="@layout/dash_board_fragment" >
+        <action
+            android:id="@+id/action_dashBoardFragment_to_learnFragment"
+            app:destination="@id/learnFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/learnFragment"
+        android:name="com.example.phoneticalphabet.ui.main.LearnFragment"
+        android:label="learn_fragment"
+        tools:layout="@layout/learn_fragment" >
+        <action
+            android:id="@+id/action_learnFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+</navigation>
