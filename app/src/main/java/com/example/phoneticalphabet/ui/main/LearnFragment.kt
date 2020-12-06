@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.phoneticalphabet.R
 import kotlinx.android.synthetic.main.learn_fragment.*
 
@@ -37,6 +38,8 @@ class LearnFragment : Fragment() {
             revealButton.visibility = View.VISIBLE
             nextButton.visibility = View.GONE
             restartButton.visibility = View.GONE
+            dashBoardButton.visibility = View.GONE
+            completeText.visibility = View.GONE
             letterTextView.text = viewModel.natoAlphabet[pos].first
             wordTextView.text = viewModel.natoAlphabet[pos].second.toUpperCase()
 
@@ -45,7 +48,12 @@ class LearnFragment : Fragment() {
                 nextButton.visibility = View.VISIBLE
                 wordTextView.visibility = View.VISIBLE
                 revealButton.visibility = View.GONE
-                if(pos >= viewModel.natoAlphabet.size - 1) restartButton.visibility = View.VISIBLE
+                if(pos >= viewModel.natoAlphabet.size - 1) {
+                    restartButton.visibility = View.VISIBLE
+                    dashBoardButton.visibility = View.VISIBLE
+                    completeText.visibility = View.VISIBLE
+                    nextButton.visibility = View.GONE
+                }
             }
 
             if (pos < viewModel.natoAlphabet.size - 1) {
@@ -61,6 +69,11 @@ class LearnFragment : Fragment() {
                 restartButton.setOnClickListener {
                     restartButton.visibility = View.GONE
                     viewModel.onRestartClick()
+                }
+                dashBoardButton.setOnClickListener {
+                    findNavController().navigate(
+                        R.id.action_learnFragment_to_dashBoardFragment
+                    )
                 }
             }
         })
