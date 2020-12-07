@@ -1,4 +1,4 @@
-package com.example.phoneticalphabet.dash
+package com.example.phoneticalphabet.ui.dash
 
 import androidx.lifecycle.ViewModel
 

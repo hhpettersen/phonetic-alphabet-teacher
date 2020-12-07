@@ -7,20 +7,32 @@
 
     <fragment
         android:id="@+id/dashBoardFragment"
-        android:name="com.example.phoneticalphabet.dash.DashBoardFragment"
+        android:name="com.example.phoneticalphabet.ui.dash.DashBoardFragment"
         android:label="dash_board_fragment"
         tools:layout="@layout/dash_board_fragment" >
         <action
             android:id="@+id/action_dashBoardFragment_to_learnFragment"
             app:destination="@id/learnFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_alphabetFragment"
+            app:destination="@id/alphabetFragment" />
     </fragment>
     <fragment
         android:id="@+id/learnFragment"
-        android:name="com.example.phoneticalphabet.ui.main.LearnFragment"
+        android:name="com.example.phoneticalphabet.ui.learn.LearnFragment"
         android:label="learn_fragment"
         tools:layout="@layout/learn_fragment" >
         <action
             android:id="@+id/action_learnFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alphabetFragment"
+        android:name="com.example.phoneticalphabet.ui.alphabet.AlphabetFragment"
+        android:label="alphabet_fragment"
+        tools:layout="@layout/alphabet_fragment" >
+        <action
+            android:id="@+id/action_alphabetFragment_to_dashBoardFragment"
             app:destination="@id/dashBoardFragment" />
     </fragment>
 </navigation>

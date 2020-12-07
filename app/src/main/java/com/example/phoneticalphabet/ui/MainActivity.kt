@@ -1,14 +1,14 @@
-package com.example.phoneticalphabet
+package com.example.phoneticalphabet.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import com.example.phoneticalphabet.dash.DashBoardFragment
+import com.example.phoneticalphabet.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
+
+
     }
 }

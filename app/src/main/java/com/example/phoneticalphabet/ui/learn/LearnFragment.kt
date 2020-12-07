@@ -1,4 +1,4 @@
-package com.example.phoneticalphabet.ui.main
+package com.example.phoneticalphabet.ui.learn
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -28,7 +28,6 @@ class LearnFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setupUI()
     }
 
@@ -40,15 +39,15 @@ class LearnFragment : Fragment() {
             restartButton.visibility = View.GONE
             dashBoardButton.visibility = View.GONE
             completeText.visibility = View.GONE
-            letterTextView.text = viewModel.natoAlphabet[pos].first
-            wordTextView.text = viewModel.natoAlphabet[pos].second.toUpperCase()
+            letterTextView.text = viewModel.shuffledAlphabet[pos].letter
+            wordTextView.text = viewModel.shuffledAlphabet[pos].word.toUpperCase()
 
             revealButton.setOnClickListener {
                 wordFilterView.visibility = View.GONE
                 nextButton.visibility = View.VISIBLE
                 wordTextView.visibility = View.VISIBLE
                 revealButton.visibility = View.GONE
-                if(pos >= viewModel.natoAlphabet.size - 1) {
+                if(pos >= viewModel.shuffledAlphabet.size - 1) {
                     restartButton.visibility = View.VISIBLE
                     dashBoardButton.visibility = View.VISIBLE
                     completeText.visibility = View.VISIBLE
@@ -56,7 +55,7 @@ class LearnFragment : Fragment() {
                 }
             }
 
-            if (pos < viewModel.natoAlphabet.size - 1) {
+            if (pos < viewModel.shuffledAlphabet.size - 1) {
                 nextButton.setOnClickListener {
                     viewModel.onNextClick()
                     revealButton.visibility = View.VISIBLE
