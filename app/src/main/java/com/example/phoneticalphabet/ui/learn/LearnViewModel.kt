@@ -31,7 +31,7 @@ class LearnViewModel : ViewModel() {
         Pair("U", "uniform"),
         Pair("V", "victor"),
         Pair("W", "whiskey"),
-        Pair("X", "xray"),
+        Pair("X", "x-ray"),
         Pair("Y", "yankee"),
         Pair("Z", "zulu")
     )
