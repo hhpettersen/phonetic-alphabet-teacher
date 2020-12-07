@@ -5,10 +5,13 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.alphabet.AlphabetFragment">
+    tools:context=".ui.alphabet.AlphabetFragment"
+    tools:background="@drawable/green_radiant_background">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="30dp"
         android:id="@+id/alphabetRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/alphabet_row"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
