@@ -1,10 +1,16 @@
 <resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
     </style>
 
 </resources>

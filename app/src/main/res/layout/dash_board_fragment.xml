@@ -5,8 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/green_radiant_background"
-    tools:context=".ui.dash.DashBoardFragment">
+    tools:context=".ui.dash.DashBoardFragment"
+    tools:background="@drawable/green_radiant_background">
 
     <Button
         android:id="@+id/alphabetButton"
