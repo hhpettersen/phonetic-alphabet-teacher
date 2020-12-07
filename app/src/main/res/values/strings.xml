@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Phonetic Alphabet</string>
+    <string name="letter_placeholder">A</string>
+    <string name="word_placeholder">ALPHA</string>
+    <string name="back_to_dashboard_button_text">Back to dashboard</string>
+    <string name="reveal_word_button_text">Reveal word</string>
+    <string name="learn_completed_text">All letters completed!</string>
+    <string name="next_button_text">Next</string>
+    <string name="restart_button_text">Restart</string>
 </resources>
