@@ -38,7 +38,7 @@
         android:id="@+id/wordFilterView"
         android:layout_width="150dp"
         android:layout_height="45dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/darkGreen"
         app:layout_constraintBottom_toBottomOf="@id/wordTextView"
         app:layout_constraintEnd_toEndOf="@id/wordTextView"
         app:layout_constraintStart_toStartOf="@id/wordTextView"
