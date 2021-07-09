@@ -8,6 +8,15 @@
     tools:context=".ui.dash.DashBoardFragment"
     tools:background="@drawable/green_radiant_background">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/globe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/alphabetButton"
         android:layout_width="wrap_content"

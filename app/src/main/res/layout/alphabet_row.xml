@@ -5,7 +5,7 @@
     android:id="@+id/alphabet_row"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:background="@color/colorPrimary">
+    tools:background="@color/green">
 
     <TextView
         android:id="@+id/letterRowTextView"

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
@@ -10,10 +10,26 @@
         <item name="colorSecondary">@color/brown</item>
         <item name="colorSecondaryVariant">@color/darkGrey</item>
         <item name="colorOnSecondary">@color/black</item>
+        <item name="android:windowBackground">@drawable/green_radiant_background</item>
     </style>
 
     <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
         <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="splashScreenTheme" parent="AppTheme">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/darkGreen</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/brown</item>
+        <item name="colorSecondaryVariant">@color/darkGrey</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/globe</item>
     </style>
 
 </resources>
