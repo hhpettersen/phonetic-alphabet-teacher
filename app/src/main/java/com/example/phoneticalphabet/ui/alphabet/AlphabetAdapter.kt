@@ -1,9 +1,9 @@
 package com.example.phoneticalphabet.ui.alphabet
 
 import android.view.View
+import com.example.phoneticalphabet.models.Alphabet
 import com.example.phoneticalphabet.recycler.Recycler
 import com.example.phoneticalphabet.recycler.TapListener
-import com.example.phoneticalphabet.ui.learn.Alphabet
 import kotlinx.android.synthetic.main.alphabet_row.view.*
 import java.util.*
 

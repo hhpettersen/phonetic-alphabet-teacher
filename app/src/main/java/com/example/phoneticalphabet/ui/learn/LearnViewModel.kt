@@ -3,6 +3,7 @@ package com.example.phoneticalphabet.ui.learn
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.phoneticalphabet.models.Alphabet
 import com.example.phoneticalphabet.recycler.Recycler
 
 class LearnViewModel : ViewModel() {
@@ -59,5 +60,3 @@ class LearnViewModel : ViewModel() {
         shuffledAlphabet = shuffledAlphabet.shuffled()
     }
 }
-
-data class Alphabet(val letter: String, val word: String) : Recycler.RenderModel

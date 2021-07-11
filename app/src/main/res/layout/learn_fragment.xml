@@ -10,7 +10,6 @@
 
     <TextView
         android:textSize="28sp"
-        android:textColor="@color/white"
         android:id="@+id/letterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +21,6 @@
 
     <TextView
         android:textSize="20sp"
-        android:textColor="@color/white"
         android:id="@+id/wordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +44,6 @@
         />
 
     <TextView
-        android:textColor="@color/white"
         android:id="@+id/completeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

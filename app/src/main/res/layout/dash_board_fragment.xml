@@ -9,6 +9,7 @@
     tools:background="@drawable/green_radiant_background">
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/globe"
@@ -36,4 +37,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/alphabetButton" />
 
+    <Button
+        android:id="@+id/quizButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/learnButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

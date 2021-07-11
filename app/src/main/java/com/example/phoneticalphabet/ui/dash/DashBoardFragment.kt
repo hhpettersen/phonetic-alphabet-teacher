@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.phoneticalphabet.R
 import kotlinx.android.synthetic.main.dash_board_fragment.view.*
+import java.io.File
+import java.io.InputStream
 
 class DashBoardFragment : Fragment() {
 
@@ -26,6 +28,12 @@ class DashBoardFragment : Fragment() {
         view.learnButton.setOnClickListener {
             findNavController().navigate(
                 R.id.action_dashBoardFragment_to_learnFragment
+            )
+        }
+
+        view.quizButton.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_dashBoardFragment_to_quizFragment
             )
         }
 

@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.phoneticalphabet.R
+import com.example.phoneticalphabet.models.Alphabet
 import com.example.phoneticalphabet.recycler.Recycler
 import com.example.phoneticalphabet.recycler.TapListener
-import com.example.phoneticalphabet.ui.learn.Alphabet
 import com.example.phoneticalphabet.ui.learn.LearnViewModel
 import kotlinx.android.synthetic.main.alphabet_fragment.*
 
