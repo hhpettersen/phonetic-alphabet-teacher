@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dashBoardFragment"
-        android:name="com.example.phoneticalphabet.ui.dash.DashBoardFragment"
+        android:name="com.app.phoneticalphabet.ui.dash.DashBoardFragment"
         android:label="dash_board_fragment"
         tools:layout="@layout/dash_board_fragment" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/learnFragment"
-        android:name="com.example.phoneticalphabet.ui.learn.LearnFragment"
+        android:name="com.app.phoneticalphabet.ui.learn.LearnFragment"
         android:label="learn_fragment"
         tools:layout="@layout/learn_fragment" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/alphabetFragment"
-        android:name="com.example.phoneticalphabet.ui.alphabet.AlphabetFragment"
+        android:name="com.app.phoneticalphabet.ui.alphabet.AlphabetFragment"
         android:label="alphabet_fragment"
         tools:layout="@layout/alphabet_fragment" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/quizFragment"
-        android:name="com.example.phoneticalphabet.ui.quiz.QuizFragment"
+        android:name="com.app.phoneticalphabet.ui.quiz.QuizFragment"
         android:label="quiz_fragment"
         tools:layout="@layout/quiz_fragment" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/postQuizFragment"
-        android:name="com.example.phoneticalphabet.ui.postquiz.PostQuizFragment"
+        android:name="com.app.phoneticalphabet.ui.postquiz.PostQuizFragment"
         android:label="post_quiz_fragment"
         tools:layout="@layout/post_quiz_fragment" >
         <action
