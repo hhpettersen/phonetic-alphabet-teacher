@@ -5,8 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dash.DashBoardFragment"
-    tools:background="@drawable/green_radiant_background">
+    tools:background="@drawable/green_radiant_background"
+    tools:context=".ui.dash.DashBoardFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,19 +23,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phonetic Alphabet"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/learnButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/learnButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Begin learning"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/alphabetButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/quizButton"
@@ -45,4 +45,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/learnButton" />
+
+    <TextView
+        android:id="@+id/highScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizButton"
+        tools:text="High score: 26" />
+
+    <ImageView
+        android:id="@+id/medalImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tier_medal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/highScoreText"
+        app:layout_constraintStart_toEndOf="@+id/highScoreText"
+        app:layout_constraintTop_toBottomOf="@+id/quizButton"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

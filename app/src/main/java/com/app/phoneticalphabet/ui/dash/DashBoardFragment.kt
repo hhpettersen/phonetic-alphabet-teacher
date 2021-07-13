@@ -6,14 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.app.phoneticalphabet.R
 import com.app.phoneticalphabet.databinding.DashBoardFragmentBinding
 import com.app.phoneticalphabet.helpers.Status
 import com.app.phoneticalphabet.models.HighScore
+import com.app.phoneticalphabet.models.ScoreTier
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.dash_board_fragment.view.*
 
 @AndroidEntryPoint
 class DashBoardFragment : Fragment() {
@@ -42,14 +43,21 @@ class DashBoardFragment : Fragment() {
         viewModel.res.observe(viewLifecycleOwner, { resource ->
             when (resource.status) {
                 Status.SUCCESS -> {
-                    resource.data.let { highScores ->
-//                        val smallHighScore: Int = highScores?.smallHighScore ?: 0
-//                        val largeHighScore: Int = highScores?.largeHighScore ?: 0
-//                        binding.smallQuizScoreText.text = "High score: $smallHighScore"
-//                        binding.largeQuizScoreText.text = "High score: $largeHighScore"
+                    resource.data.let { highScore ->
                         // If it is the first time the user uses the app, the highscore will be set
-                        if (highScores == null) viewModel.insertHighScores(HighScore())
-//                        colorCup(smallHighScore, largeHighScore)
+                        if (highScore == null) {
+                            viewModel.insertHighScores(HighScore())
+                            binding.highScoreText.text = "Play the quiz to test your abilities!"
+                        } else {
+                            if (highScore.score == 0) {
+                                binding.highScoreText.visibility = View.GONE
+                            } else {
+                                binding.medalImageView.visibility = View.VISIBLE
+                                colorMedal(highScore.score)
+                                binding.highScoreText.text =
+                                    if (highScore.score == 26) "All correct answers!" else "High score: ${highScore.score}/26"
+                            }
+                        }
                     }
                 }
                 Status.LOADING -> Toast.makeText(context, "Loading", Toast.LENGTH_SHORT).show()
@@ -74,5 +82,17 @@ class DashBoardFragment : Fragment() {
                 R.id.action_dashBoardFragment_to_quizFragment
             )
         }
+    }
+
+    private fun colorMedal(score: Int) {
+        val scoreTier = ScoreTier.getScoreTier(score)
+        val tierColor = ScoreTier.getTierTint(scoreTier)
+        binding.medalImageView.drawable.setTint(
+            ResourcesCompat.getColor(
+                resources,
+                tierColor,
+                null
+            )
+        )
     }
 }

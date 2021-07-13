@@ -29,8 +29,6 @@ class QuizFragment : Fragment() {
     private var round = 0
     private var score = 0
 
-    private val viewModel: QuizViewModel by viewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

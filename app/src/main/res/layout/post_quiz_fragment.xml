@@ -6,17 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.postquiz.PostQuizFragment">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottieAnimationView"
+    <ImageView
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:id="@+id/medalImageView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:layout_margin="@dimen/margin_padding_size_xlarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        tools:src="@drawable/globe" />
+        android:src="@drawable/tier_medal"
+        tools:src="@drawable/tier_medal" />
+
+    <TextView
+        android:id="@+id/medalTierText"
+        android:textSize="@dimen/text_size_xlarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/medalImageView"
+        app:layout_constraintStart_toStartOf="@+id/medalImageView"
+        app:layout_constraintTop_toBottomOf="@+id/medalImageView"
+        tools:text="Gold" />
 
     <TextView
         android:id="@+id/scoreText"
@@ -30,6 +41,7 @@
         tools:text="Your score: 5" />
 
     <TextView
+        android:paddingHorizontal="20dp"
         android:paddingBottom="@dimen/margin_padding_size_xxlarge"
         android:id="@+id/scoreInfoText"
         android:layout_width="wrap_content"
@@ -37,6 +49,7 @@
         app:layout_constraintBottom_toTopOf="@+id/playAgainButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
         tools:text="You set a new high score, congratulations!" />
 
     <Button

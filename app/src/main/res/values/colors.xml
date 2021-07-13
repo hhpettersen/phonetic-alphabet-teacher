@@ -8,4 +8,7 @@
     <color name="black">#000000</color>
     <color name="correctGreen">#10E119</color>
     <color name="wrongRed">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="bronze">#cd7f32</color>
 </resources>
