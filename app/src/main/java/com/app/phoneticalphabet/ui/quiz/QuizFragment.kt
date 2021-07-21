@@ -45,7 +45,7 @@ class QuizFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        questions = Question.generateQuestion(QuizWords.parsedWords, QuizWords.natoAlphabet)
+        questions = Question.generateQuestion(QuizWords.words, QuizWords.natoAlphabet)
 
         setScore()
 

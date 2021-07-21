@@ -31,9 +31,8 @@ data class Question(
 
             for (alphabet in correctAnswer) {
                 val wrongs = wrongAnswers
-                    .filter { it.startsWith(alphabet.first.lowercase(Locale.getDefault())) }
+                    .filter { it.toLowerCase(Locale.getDefault()).startsWith(alphabet.first.lowercase(Locale.getDefault())) }
                     .shuffled()
-                    .subList(0, 3)
 
                 questions.add(Question(wrongs, alphabet.second, alphabet.first))
             }
